@@ -1,24 +1,24 @@
 # Gestion_Stock
-Stock-Management-System
+<h1>Stock-Management-System</h1>
 
 
-ScreenShots
+<h2>ScreenShots</h2>
 
-Login
+<h3>Login</h3>
 <img src='https://github.com/ainemehdi6/Gestion_Stock/blob/main/screens/login.PNG'>
 
-Dashboard
+<h3>Dashboard</h3>
 <img src='https://github.com/ainemehdi6/Gestion_Stock/blob/main/screens/dashboard.PNG'>
 
-Users Management
+<h3>Users Management</h3>
 <img src='https://github.com/ainemehdi6/Gestion_Stock/blob/main/screens/users.PNG'>
 
-Products Management
+<h3>Products Management</h3>
 <img src='https://github.com/ainemehdi6/Gestion_Stock/blob/main/screens/products.PNG'>
 <img src='https://github.com/ainemehdi6/Gestion_Stock/blob/main/screens/products2.PNG'>
 
-Orders Management
+<h3>Orders Management</h3>
 <img src='https://github.com/ainemehdi6/Gestion_Stock/blob/main/screens/orders.PNG'>
 
-Sells Analytics
+<h3>Sells Analytics</h3>
 <img src='https://github.com/ainemehdi6/Gestion_Stock/blob/main/screens/analytics.PNG'>
