@@ -1,5 +1,4 @@
-# Gestion_Stock
-<h1>Stock-Management-System</h1>
+#<h1>Stock-Management-System</h1>
 
 
 <h2>ScreenShots</h2>
