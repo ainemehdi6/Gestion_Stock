@@ -47,20 +47,6 @@ CREATE TABLE `attribute_value` (
   `attribute_parent_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Déchargement des données de la table `attribute_value`
---
-
-INSERT INTO `attribute_value` (`id`, `value`, `attribute_parent_id`) VALUES
-(5, 'Blue', 2),
-(6, 'White', 2),
-(7, 'M', 3),
-(8, 'L', 3),
-(9, 'Green', 2),
-(10, 'Black', 2),
-(12, 'Grey', 2),
-(13, 'S', 3);
-
 -- --------------------------------------------------------
 
 --
@@ -73,15 +59,6 @@ CREATE TABLE `brands` (
   `active` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Déchargement des données de la table `brands`
---
-
-INSERT INTO `brands` (`id`, `name`, `active`) VALUES
-(4, 'HyperX', 1),
-(5, 'SteelSeries', 1),
-(6, 'Logitech', 1),
-(7, 'Cooler Master', 1);
 
 -- --------------------------------------------------------
 
@@ -94,15 +71,6 @@ CREATE TABLE `categories` (
   `name` varchar(255) NOT NULL,
   `active` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `categories`
---
-
-INSERT INTO `categories` (`id`, `name`, `active`) VALUES
-(4, 'Head Sets', 1),
-(5, 'Keyboards', 1),
-(6, 'Mouses', 1);
 
 -- --------------------------------------------------------
 
@@ -121,13 +89,6 @@ CREATE TABLE `company` (
   `message` text NOT NULL,
   `currency` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `company`
---
-
-INSERT INTO `company` (`id`, `company_name`, `service_charge_value`, `vat_charge_value`, `address`, `phone`, `country`, `message`, `currency`) VALUES
-(1, '23Digit', '13', '10', 'Marrakech', '758676851', 'Maroc', 'hello world!', 'MAD');
 
 -- --------------------------------------------------------
 
@@ -173,13 +134,6 @@ CREATE TABLE `orders` (
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Déchargement des données de la table `orders`
---
-
-INSERT INTO `orders` (`id`, `bill_no`, `customer_name`, `customer_address`, `customer_phone`, `date_time`, `gross_amount`, `service_charge_rate`, `service_charge`, `vat_charge_rate`, `vat_charge`, `net_amount`, `discount`, `paid_status`, `user_id`) VALUES
-(2, 'BILPR-3F4F', 'EL MEHDI', 'NR 8 ', '06233131', '1624643808', '144.70', '13', '18.81', '10', '14.47', '177.98', '', 1, 1),
-(3, 'BILPR-5D6F', 'ZZEZE', 'DZZE', '0727222', '1624644393', '109.30', '13', '14.21', '10', '10.93', '134.44', '', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -196,13 +150,6 @@ CREATE TABLE `orders_item` (
   `amount` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Déchargement des données de la table `orders_item`
---
-
-INSERT INTO `orders_item` (`id`, `order_id`, `product_id`, `qty`, `rate`, `amount`) VALUES
-(4, 2, 3, '1', '144.7', '144.70'),
-(6, 3, 6, '1', '109.3', '109.30');
 
 -- --------------------------------------------------------
 
@@ -225,15 +172,6 @@ CREATE TABLE `products` (
   `availability` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Déchargement des données de la table `products`
---
-
-INSERT INTO `products` (`id`, `name`, `sku`, `price`, `qty`, `image`, `description`, `attribute_value_id`, `brand_id`, `category_id`, `store_id`, `availability`) VALUES
-(3, 'HYPERX CLOUD ALPHA GAMING', 'H1303984', '144.7', '99', 'assets/images/product_image/60d60763bd3de.png', '<p>\r\n\r\nFrequency response :13Hz–27,000Hz<br><br>Weight with mic &amp; cable :336g<br><br>Cable length and type :Detachable headset cable (1.3m) + PC extension cable (2m)\r\n\r\n<br></p>', 'null', '[\"4\"]', '[\"4\"]', 3, 1),
-(5, 'LOGITECH GAMING KEYBOARD RVB G213', 'K1314141', '70.5', '100', 'assets/images/product_image/60d61ac87652d.PNG', '<p>\r\n\r\nWidth :452 mm<br><br>Weight :1 000 g<br><br>Cable length (power / charge) :1,8 m\r\n\r\n<br></p>', 'null', '[\"6\"]', '[\"5\"]', 3, 1),
-(6, 'STEELSERIES SENSEI TEN LIMITED EDITION NEON RIDER', 'M131311', '109.3', '99', 'assets/images/product_image/60d61b134f9c0.PNG', '<p>Type of sensor :Optical<br><br>CPI :CPI from 50 to 18,000, in increments of 50<br><br>Frequency :1 000 Hz 1 ms\r\n\r\n<br></p>', 'null', '[\"5\"]', '[\"6\"]', 3, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -246,12 +184,6 @@ CREATE TABLE `stores` (
   `active` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Déchargement des données de la table `stores`
---
-
-INSERT INTO `stores` (`id`, `name`, `active`) VALUES
-(3, 'MHDSTR', 1);
 
 -- --------------------------------------------------------
 
